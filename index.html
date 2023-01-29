@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kanban Board</title>
+
+		<!-- FONT AWESOME -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+		<!-- JQUERY UI -->
+		<link
+			rel="stylesheet"
+			href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+		<link
+			rel="stylesheet"
+			href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+		/>
+
+		<!-- CSS -->
+		<style>
+			body {
+				max-width: 80%;
+				margin: 0 auto;
+				text-align: center;
+				font-family: cursive;
+				color: #343434;
+				box-sizing: border-box;
+				padding: 0;
+			}
+			.sortable {
+				width: 170px;
+				min-height: 100px;
+				list-style-type: none;
+				margin: 0;
+				padding: 20px 25px;
+				display: inline-block;
+				margin-right: 15px;
+				background-color: #000;
+				border-radius: 10px;
+				vertical-align: top;
+			}
+			.sortable li {
+				margin: 15px 0;
+				padding: 10px 15px;
+				font-size: 1em;
+				width: 140px;
+				border-radius: 10px;
+			}
+			h1 {
+				font-size: 3rem;
+			}
+			h2 {
+				background-color: aqua;
+				border-radius: 5px;
+				color: #000;
+				margin-top: 0;
+				padding: 10px;
+			}
+		</style>
+
+		<!-- SCRIPT JS -->
+		<script>
+			$(function () {
+				$(".sortable")
+					.sortable({
+						connectWith: ".connectedSortable",
+					})
+					.disableSelection();
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Kanban Board</h1>
+		<ul class="sortable connectedSortable">
+			<h2>To-do</h2>
+			<li class="ui-state-default">
+				Practicing Indentation <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">
+				Pizza Order Form <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">Blogger <i class="fa-solid fa-user"></i></li>
+			<li class="ui-state-default">
+				Building Boxes <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">
+				Calendar <i class="fa-solid fa-user"></i>
+			</li>
+		</ul>
+		<ul class="sortable connectedSortable">
+			<h2>In-progress</h2>
+			<li class="ui-state-default">
+				Intro to JS <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">Resume <i class="fa-solid fa-user"></i></li>
+			<li class="ui-state-default">
+				PHP Documentation <i class="fa-solid fa-user"></i>
+			</li>
+		</ul>
+		<ul class="sortable connectedSortable">
+			<h2>For Approval</h2>
+			<li class="ui-state-default">
+				Python Website <i class="fa-solid fa-user"></i>
+			</li>
+		</ul>
+		<ul class="sortable connectedSortable">
+			<h2>Testing</h2>
+			<li class="ui-state-default">
+				(RWD) Building Boxes <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">
+				(RWD) Resume <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">
+				Practicing Git <i class="fa-solid fa-user"></i>
+			</li>
+		</ul>
+		<ul class="sortable connectedSortable">
+			<h2>Done</h2>
+			<li class="ui-state-default">
+				Candy Crush <i class="fa-solid fa-user"></i>
+			</li>
+			<li class="ui-state-default">
+				Matchy Matchy! <i class="fa-solid fa-user"></i>
+			</li>
+		</ul>
+	</body>
+</html>
